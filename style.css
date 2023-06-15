@@ -1,0 +1,107 @@
+:root {
+  --clr-ascent-400: hsl(49 16% 48%);
+  --clr-ascent-200: hsl(40 33% 82%);
+  --clr-ascent-600: hsl(21 29% 46%);
+  --clr-ascent-300: hsl(33 21% 63%);
+  --clr-ascent-850: hsl(52 17% 17%);
+
+  --clr-primary-800: hsl(29 42% 14%);
+  --clr-secondary-900: hsl(120 13% 10%);
+
+  --ff-ascent: "Suwannaphum", serif;
+  --ff-base: "Inter", sans-serif;
+
+  --spacing-general: 0.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  margin: var(--spacing-general);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--clr-secondary-900);
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--clr-ascent-200);
+  border-radius: 50rem;
+  padding: 0.125rem;
+}
+
+.nav-container-left {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 70%;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--clr-ascent-200);
+}
+
+.nav-title {
+  background-color: var(--clr-ascent-850);
+  text-align: center;
+  padding-block: 0.5rem;
+  border-radius: 50rem;
+}
+
+.button {
+  width: 30%;
+  border: 1px solid var(--clr-ascent-200);
+  border-radius: 50rem;
+  background-color: transparent;
+  color: var(--clr-ascent-200);
+  padding-block: 0.5rem;
+}
