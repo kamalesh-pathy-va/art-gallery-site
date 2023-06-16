@@ -89,7 +89,7 @@ p {
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 70%;
+  width: max(80%, 16rem);
 }
 
 .nav-link {
@@ -105,7 +105,7 @@ p {
 }
 
 .button {
-  width: 30%;
+  width: max(6rem, 20%);
   border: 1px solid var(--clr-ascent-200);
   border-radius: 50rem;
   background-color: transparent;
@@ -303,4 +303,34 @@ p {
 
 .origin-country {
   font-weight: bolder;
+}
+
+@media only screen and (min-width: 37rem) {
+  .nav-title,
+  .button {
+    padding: 0.75rem;
+  }
+
+  .art-card-content {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .main-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .art-portrait,
+  .art-landscape {
+    grid-column: span 2;
+  }
+
+  .art-title {
+    font-size: 1.75rem;
+  }
+
+  .art-image-portrait-container {
+    aspect-ratio: 16/5;
+  }
 }
