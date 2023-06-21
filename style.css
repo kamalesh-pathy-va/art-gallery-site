@@ -69,6 +69,7 @@ html {
 
 body {
   background-color: var(--clr-secondary-900);
+  overflow-x: hidden;
 }
 
 p {
@@ -87,12 +88,13 @@ p {
 
 .nav-container-left {
   list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
-  width: max(80%, 16rem);
 }
 
-.nav-link {
+.nav-link,
+.nav-title {
   text-decoration: none;
   color: var(--clr-ascent-200);
 }
@@ -102,6 +104,7 @@ p {
   text-align: center;
   padding-block: 0.5rem;
   border-radius: var(--pill-border);
+  width: max(80%, 16rem);
 }
 
 .button {
@@ -314,10 +317,43 @@ p {
   font-weight: bolder;
 }
 
+@media (max-width: 52rem) {
+  .nav-container-left {
+    position: fixed;
+    z-index: 10;
+    inset: 0 0 0 30%;
+    background-color: var(--clr-primary-800);
+    flex-direction: column;
+    gap: 2rem;
+    padding: min(30vh, 7rem) 2rem;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 350ms ease-out;
+  }
+
+  .nav-container-left[data-visible="true"] {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  .mobile-nav-btn {
+    display: block;
+    z-index: 100;
+  }
+
+  .desktop-contact-me {
+    display: none;
+  }
+}
+
 @media only screen and (min-width: 37rem) {
   .nav-title,
   .button {
     padding: 0.75rem;
+  }
+
+  .mobile-nav-btn {
+    display: block;
   }
 
   .art-card-content {
@@ -360,5 +396,48 @@ p {
 
   .art-card-profile .card {
     gap: 2.25rem;
+  }
+}
+
+@media only screen and (min-width: 52rem) {
+  .mobile-nav-btn {
+    display: none;
+  }
+
+  .desktop-contact-me {
+    display: block;
+    width: auto;
+    padding: 0.75rem 2rem;
+    margin-inline-start: auto;
+  }
+
+  .nav-title {
+    width: 27.5rem;
+  }
+
+  .nav-bar {
+    justify-content: flex-start;
+    gap: 0.25rem;
+  }
+
+  .nav-link {
+    padding: 0.75rem 2rem;
+    border: 0.063rem solid var(--clr-ascent-200);
+    border-radius: var(--pill-border);
+  }
+
+  .nav-link,
+  .button {
+    transition: all 250ms ease-in;
+  }
+
+  .nav-link:hover,
+  .button:hover {
+    background-color: var(--clr-ascent-200);
+    color: var(--clr-ascent-850);
+  }
+
+  .nav-container-left {
+    gap: 0.25rem;
   }
 }
