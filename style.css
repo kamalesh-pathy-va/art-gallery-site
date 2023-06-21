@@ -257,6 +257,15 @@ p {
   background-color: var(--clr-ascent-300);
 }
 
+.art-portrait,
+.art-landscape,
+.art-card-cover,
+.art-card-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .source-image-cover {
   display: flex;
   justify-content: space-between;
@@ -332,5 +341,24 @@ p {
 
   .art-image-portrait-container {
     aspect-ratio: 16/5;
+  }
+
+  .art-landscape .card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .art-image-landscape-container {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    height: 100%;
+  }
+  .art-landscape .card .art-description {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+
+  .art-card-profile .card {
+    gap: 2.25rem;
   }
 }
