@@ -29,7 +29,9 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  margin: var(--spacing-general);
+  margin: var(--spacing-general) auto;
+  max-width: 130rem;
+  padding-inline: var(--spacing-general);
 }
 
 img,
@@ -317,7 +319,7 @@ p {
   font-weight: bolder;
 }
 
-@media (max-width: 52rem) {
+@media (max-width: 63.5rem) {
   .nav-container-left {
     position: fixed;
     z-index: 10;
@@ -399,7 +401,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 52rem) {
+@media only screen and (min-width: 63.5rem) {
   .mobile-nav-btn {
     display: none;
   }
@@ -412,7 +414,7 @@ p {
   }
 
   .nav-title {
-    width: 27.5rem;
+    width: min(27.5rem, 40%);
   }
 
   .nav-bar {
@@ -439,5 +441,46 @@ p {
 
   .nav-container-left {
     gap: 0.25rem;
+  }
+
+  .main-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 90vh;
+  }
+
+  .card {
+    gap: 1rem;
+  }
+
+  .art-title {
+    font-size: 2.125rem;
+  }
+
+  .art-portrait {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .art-portrait .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .art-image-portrait-container {
+    aspect-ratio: unset;
+    height: 100%;
+    object-fit: cover;
+  }
+  .art-image-landscape-container {
+    aspect-ratio: 16/8;
+  }
+  .art-image-cover-container {
+    aspect-ratio: 16/6;
+  }
+
+  .art-image-cover {
+    object-position: 50% 21%;
   }
 }
