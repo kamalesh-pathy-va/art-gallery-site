@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Gallery</title>
+    <link rel="shortcut icon" href="assets/icons/myName.ico" type="image/x-icon">
+    <meta property="og:site_name" content="Art Gallery - Kamalespathy">
+    <meta property="og:url" content="https://kamalesh-pathy-va.github.io/art-gallery-site/">
+    <meta property="og:title" content="An art gallery site by Kamaleshpathy">
+    <meta property="og:image" content="https://kamalesh-pathy-va.github.io/art-gallery-site/assets/images/kamaleshpathy-name.png">
+    <title>Art Gallery - Kamalespathy</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,18 +16,20 @@
     <script src="index.js" defer></script>
 </head>
 <body>
-    <nav>
-        <div class="nav-bar">
-            <a href="#" class="nav-title">Museo Sans</a>
-            <ul class="nav-container-left" data-visible="false">
-                <li class="nav-item"><a href="#" class="nav-link">Collections</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Our mission</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Events</a></li>
-            </ul>
-            <button class="button desktop-contact-me">Contact now</button>
-            <button class="button mobile-nav-btn">Menu</button>
-        </div>
-    </nav>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <a href="#" class="nav-title">Museo Sans</a>
+                <ul class="nav-container-left" data-visible="false">
+                    <li class="nav-item"><a href="#" class="nav-link">Collections</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Our mission</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Events</a></li>
+                </ul>
+                <button class="button desktop-contact-me">Contact now</button>
+                <button class="button mobile-nav-btn">Menu</button>
+            </div>
+        </nav>
+    </header>
     <main>
         <div class="main-wrapper">
             <article class="art-portrait">
@@ -107,5 +114,48 @@
             </article>
         </div>
     </main>
+    <footer>
+        <div class="footer-wrapper">
+            <picture class="footer-dev-name">
+                <img src="assets/images/kamaleshpathy-name.png" alt="Developer name: Kamaleshpathy written in stylized font">
+            </picture>
+            <p class="footer-content">
+                A plane HTML, CSS static site made from the design created by
+                <a href="https://www.instagram.com/thomsoon_com/">@thomsoon_com</a>.
+            </p>
+            <ul class="social-links">
+                <li>
+                    <a href="" class="social-link-item">
+                        <img src="assets/icons/twitter.svg" alt="Twitter icon" class="social-icons">
+                        <span class="social-link-name">Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="social-link-item">
+                        <img src="assets/icons/github.svg" alt="Github icon" class="social-icons">
+                        <span class="social-link-name">Github</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="social-link-item">
+                        <img src="assets/icons/linkedin.svg" alt="LinkedIn icon" class="social-icons">
+                        <span class="social-link-name">LinkedIn</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="social-link-item">
+                        <img src="assets/icons/instagram.svg" alt="Instagram icon" class="social-icons">
+                        <span class="social-link-name">Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="social-link-item">
+                        <img src="assets/icons/reddit.svg" alt="Reddit icon" class="social-icons">
+                        <span class="social-link-name">Reddit</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
