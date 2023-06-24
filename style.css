@@ -345,6 +345,10 @@ footer {
   mix-blend-mode: hard-light;
 }
 
+.footer-content a {
+  text-decoration: none;
+}
+
 .social-links {
   list-style-type: none;
   margin: 0;
